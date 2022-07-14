@@ -1,12 +1,13 @@
 import { createConnection } from 'mysql2'
+import 'dotenv/config'
 
 //Creando conexión
 const conexion = createConnection(
     {
-        host: "sql521.main-hosting.eu",
-        user: "u413489667_ejemplo",
-        password: "Ejemplo2022",
-        database: "u413489667_ejemplo"
+        host: process.env.HOST,
+        user: process.env.DBUSER,
+        password: process.env.DBPASSWORD,
+        database: process.env.DATABASE
     }
 )
 
