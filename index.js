@@ -10,12 +10,3 @@ const conexion = createConnection(
     }
 )
 
-//Insertar datos a una tabla de nuestra BD
-conexion.query('INSERT INTO personas SET ?',{
-    nombre: "Kevin",
-    apellido: "Luciano",
-    edad:27
-}, (error, rows) => {
-    if(error) throw error
-    console.log(rows)
-})
